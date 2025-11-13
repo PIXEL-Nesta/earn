@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EarnYou — Learn & Earn Smarter</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/jpg" href="unnamed.jpg">
+</head>
+<body>
+  <header class="navbar container" role="banner">
+    <a class="brand" href="index.html">
+      <div class="logo"><img style="border-radius: 5px;" width="50px" src="unnamed.jpg"></img></div>
+      <h1>EarnYou</h1>
+    </a>
+
+    <div style="display:flex;align-items:center;gap:18px">
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="search-wrap" title="Search posts">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <input id="searchInput" type="search" placeholder="Search posts..." oninput="searchPosts()" />
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Learn practical ways to earn — the smart & modern way</h2>
+        <p>EarnYou curates the best tools, apps, and guides to help you start earning online with minimal friction.</p>
+        <p style="margin-top:14px"><a class="cta" href="#posts">Explore posts</a></p>
+      </div>
+      <div style="width:320px">
+        <div style="padding:10px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));">
+          <h4 style="margin:0 0 8px 0">Quick Search</h4>
+          <input id="searchInput2" placeholder="Try: earn, apps, blogging" style="width:100%;padding:10px;border-radius:10px;border:0;background:transparent;color:inherit" oninput="document.getElementById('searchInput').value=this.value; searchPosts()" />
+          <div id="searchResults"></div>
+        </div>
+      </div>
+    </section>
+
+    <h3 id="posts" style="margin-top:28px">Latest Posts</h3>
+    <div class="grid" id="postsGrid">
+      <article class="card" onclick="location.href='posts/post1.html'">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcRGgoWdRG3m_yP35xeq1JlyRE4VOxPOXbpA&s" alt="">
+        <div class="body">
+          <h3>How to Earn Online</h3>
+          <p>Beginner-friendly strategies and apps to start earning from home.</p>
+        </div>
+      </article>
+
+      <article class="card" onclick="location.href='posts/post2.html'">
+        <img src="https://jksdigital.in/wp-content/uploads/2025/07/Himachal-%E0%A4%AE%E0%A5%87%E0%A4%82-%E0%A4%8F%E0%A4%95-%E0%A4%B8%E0%A4%BE%E0%A4%A5-5-%E0%A4%9C%E0%A4%97%E0%A4%B9-%E0%A4%AB%E0%A4%9F%E0%A5%87-%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%B2-%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE-%E0%A4%95%E0%A5%81%E0%A4%A6%E0%A4%B0%E0%A4%A4-%E0%A4%95%E0%A4%BE-%E0%A4%95%E0%A4%B9%E0%A4%B0-%E0%A4%B6%E0%A5%81%E0%A4%B0%E0%A5%82-%E0%A4%B9%E0%A5%8B-%E0%A4%97%E0%A4%AF%E0%A4%BE-71-1024x576.webp" alt="">
+        <div class="body">
+          <h3>Top 5 Money Making Apps</h3>
+          <p>Trusted apps that let you earn using simple microtasks and referrals.</p>
+        </div>
+      </article>
+
+      <article class="card" onclick="location.href='posts/post3.html'">
+        <img src="https://p2pgallery.s3.eu-central-1.amazonaws.com/BLOG-FEATUREDIMAGE/how-to-make-money-with-my-phone-without-investment.webp" alt="">
+        <div class="body">
+          <h3>Ways to Earn Without Investment</h3>
+          <p>Practical ideas to start earning without spending money upfront.</p>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 EarnYou — Designed with care.</p>
+    </div>
+  </footer>
+
+<script src="search.js"></script>
+</body>
+</html>
