@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Spin & Win Game</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      padding: 15px 30px;
+      backdrop-filter: blur(8px);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00c3ff;
+    }
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    h1 {
+      text-align: center;
+      color: #00c3ff;
+    }
+    h2 {
+      color: #00bcd4;
+      margin-top: 30px;
+    }
+    p {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      margin-top: 40px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><a href="index.html">🎯 Spin & Win</a></div>
+    <div class="links">
+      <a href="game.html">Play Game</a>
+      <a href="redeem.html">Redeem</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>About Spin & Win – The Fun Reward Game</h1>
+
+    <p>
+      Welcome to <strong>Spin & Win</strong> – a lighthearted, fun-based online spinner game created purely for entertainment. This project is designed for those who enjoy casual web games with an element of excitement and curiosity. Here, you can spin a beautifully designed wheel to earn points, collect rewards, and track your redemption history — all without any backend or real transactions involved. Everything happens right inside your browser, which means your progress is stored locally for fun play only.
+    </p>
+
+    <h2>🎮 The Concept Behind the Game</h2>
+    <p>
+      Spin & Win is inspired by classic reward-based games, but with a creative twist — it’s 100% client-side, meaning there’s no database, no real money, and no risk involved. The idea is to give users a virtual reward experience, where spinning the wheel gives you a random number of points. The available rewards on the spinner are points. With every spin, you add points to your local score and get closer to the redeem section, where you can simulate exchanging your points for gift cards.
+    </p>
+
+    <h2>💰 Redeem System Explained</h2>
+    <p>
+      The redeem page is where the fun continues. Once you have collected enough points, you can head over to the redeem section to convert them into virtual gift cards. The available options are:
+      <ul>
+        <li>100 points = ₹10 Google Play Gift Card</li>
+        <li>200 points = ₹20 Google Play Gift Card</li>
+        <li>500 points = ₹50 Google Play Gift Card</li>
+      </ul>
+      When you redeem, the system sends you to a <strong>History page</strong> showing a pending status with a 48-hour timer. This creates the illusion of real-time processing. After 48 hours, the system automatically generates a 16-character redeem code, purely for fun. This lets players feel a sense of completion without involving real transactions.
+    </p>
+
+    <h2>🕒 Daily Spin Limit</h2>
+    <p>
+      To make the experience more realistic and to add a little challenge, there’s a daily limit of 20 spins per day. Once you’ve reached this limit, you’ll need to wait for the next day to spin again. The limit resets automatically based on your local time, stored inside your browser’s localStorage. This not only helps maintain a balanced game but also gives players a reason to return every day.
+    </p>
+
+    <h2>⚙️ How It Works Technically</h2>
+    <p>
+      Spin & Win runs entirely using HTML, CSS, and JavaScript. There’s no backend or database — everything from your total points, spin count, and redeem history is managed through the browser using localStorage. The spinner animation uses CSS transitions and JavaScript math functions to create random rotation angles, ensuring every spin feels natural and unpredictable. Since there’s no real server communication, all data stays private to your device.
+    </p>
+
+    <h2>🌟 Our Design Vision</h2>
+    <p>
+      The visual theme of Spin & Win follows a “premium casual” design — dark gradients, glowing neon highlights, and smooth animations. The spinner has a glossy 3D effect with high-quality colors, while the navigation bar and redeem cards maintain a clean and minimal aesthetic. The goal was to make the entire interface simple, lightweight, and appealing for all screen sizes — from mobile to desktop.
+    </p>
+
+    <h2>⚠️ Important Disclaimer</h2>
+    <p>
+      Spin & Win is purely a <strong>awesome</strong> and an actual earning platform. The Google Play gift cards, redeem codes, and reward system shown in the game are fictional and do not hold any real-world value. This game is meant to demonstrate front-end logic, randomization, local data storage, and smooth UI animations in JavaScript — nothing more. Please do not consider the points or gift cards as real currency.
+    </p>
+
+    <h2>📚 Learning Purpose</h2>
+    <p>
+      This project is also a great educational example for new web developers who want to learn how front-end logic, animations, and gamification elements can work together. The game covers multiple JavaScript concepts — including random number generation, CSS rotation effects, event listeners, DOM updates, and localStorage management. By examining the source code, learners can understand how to create dynamic, interactive browser-based projects.
+    </p>
+
+    <h2>💡 Why You’ll Love It</h2>
+    <p>
+      Spin & Win keeps users engaged through curiosity and repetition. The thrill of spinning, earning points, and “redeeming” keeps the experience satisfying. Even though it’s all simulated, the design gives you a sense of achievement every time you unlock a new fake gift card. The redeem history page makes it look organized, adding to the game’s realistic touch.
+    </p>
+
+    <h2>🔮 The Future of Spin & Win</h2>
+    <p>
+      In the future, more fun features can be added, like custom spin themes, sound effects, daily challenges, and leaderboard systems — all still without backend, using only localStorage and clever JavaScript logic. It’s an ever-growing concept that combines creativity with coding in a way that’s enjoyable for both players and developers.
+    </p>
+<a style="display: flex; justify-content: center; align-items: center; font-size:30px;" href="game.html">Spin and Win</a>
+    <p>
+      Ultimately, Spin & Win is about prizes — it’s about fun, imagination, and learning how interactive websites can feel alive even without servers or real transactions. Enjoy your spins, explore your luck, and most importantly — keep coding and experimenting. The more you play, the more you learn. Spin wisely, play fairly, and enjoy this creative little corner of the web built just for fun.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Spin & Win | Created for Fun & Learning</p>
+  </footer>
+
+</body>
+</html>

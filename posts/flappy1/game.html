@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flappy EarnYou</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <div class="brand"><div class="logo">EY</div><h1>EarnYou</h1></div>
+      <button class="btn" onclick="location.href='about.html'">About</button>
+    </header>
+
+    <main>
+      <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+      <div id="scoreBoard">
+        <h2>Score: <span id="score">0</span></h2>
+        <p>Best: <span id="best">0</span></p>
+      </div>
+    </main>
+
+    <!-- Redeem popup -->
+    <div id="popup" class="popup hidden">
+      <div class="popup-box">
+        <h2>🎉 Congratulations!</h2>
+        <p>You reached 20 points!</p>
+        <p>Your Redeem Code:</p>
+        <div id="redeemCode" class="code-box"></div>
+        <button class="btn" onclick="closePopup()">OK</button>
+      </div>
+    </div>
+
+    <footer class="footer">© 2025 EarnYou — Flap. Score. Win.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

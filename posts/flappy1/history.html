@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>History — Flappy</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <a class="brand" href="game.html"><div class="logo">EY</div><h1>EarnYou</h1></a>
+      <div class="nav-actions">
+        <button class="btn" onclick="location.href='game.html'">Game</button>
+        <button class="btn" onclick="location.href='redeem.html'">Redeem</button>
+      </div>
+    </header>
+
+    <main style="margin-top:18px">
+      <div class="card">
+        <h2>History & Redeem Requests</h2>
+        <p class="small">Pending requests will be processed automatically after 48 hours.</p>
+
+        <div id="historyList" class="history-list" style="margin-top:12px"></div>
+
+        <div style="margin-top:14px">
+          <button class="btn" onclick="clearHistory()">Clear History</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+<script>
+(function(){
+  const KEY_HISTORY = 'fb_history';
+  const toast = document.getElementById('toast');
+
+  function showToast(t,tm=2000){ toast.textContent=t; toast.classList.remove('hidden'); setTimeout(()=>toast.classList.add('hidden'),tm); }
+  function getHistory(){ return JSON.parse(localStorage.getItem(KEY_HISTORY)||'[]'); }
+  function saveHistory(h){ localStorage.setItem(KEY_HISTORY, JSON.stringify(h)); }
+
+  // generate code
+  function genCode(){
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let s=''; for(let i=0;i<16;i++) s += chars.charAt(Math.floor(Math.random()*chars.length));
+    return s;
+  }
+
+  // check pending and update if due
+  function checkAndUpdate(){
+    let hist = getHistory();
+    const now = new Date();
+    let changed=false;
+    hist = hist.map(item=>{
+      if(item.status === 'pending'){
+        const due = new Date(item.dueAt);
+        if(now >= due){
+          item.status = 'redeemed';
+          item.redeemedAt = now.toISOString();
+          item.code = genCode();
+          changed = true;
+        }
+      }
+      return item;
+    });
+    if(changed) saveHistory(hist);
+    return hist;
+  }
+
+  function render(){
+    const list = checkAndUpdate();
+    const container = document.getElementById('historyList');
+    container.innerHTML = '';
+    if(list.length===0){ container.innerHTML = '<div class="small">No history yet</div>'; return; }
+    list.slice().reverse().forEach(item=>{
+      const div = document.createElement('div');
+      div.className='history-item';
+      const req = new Date(item.requestedAt).toLocaleString();
+      let inner = '<div style="display:flex;justify-content:space-between;align-items:center"><div><strong>Redeem ' + item.points + ' coins</strong><div class="small">' + req + '</div></div>';
+      if(item.status === 'pending'){
+        const due = new Date(item.dueAt);
+        const diff = due - new Date();
+        const hrs = Math.max(0, Math.floor(diff/3600000));
+        const mins = Math.max(0, Math.floor((diff%3600000)/60000));
+        inner += '<div style="text-align:right"><span class="badge pending">Pending</span><div class="small">Time left: ' + hrs + 'h ' + mins + 'm</div></div>';
+      } else {
+        inner += '<div style="text-align:right"><span class="badge done">Redeemed</span><div class="small">Code: ' + (item.code||'') + '</div></div>';
+      }
+      inner += '</div>';
+      div.innerHTML = inner;
+      container.appendChild(div);
+    });
+  }
+
+  window.clearHistory = function(){ if(confirm('Clear history?')){ localStorage.removeItem(KEY_HISTORY); render(); showToast('History cleared'); } }
+
+  render();
+  setInterval(render, 60*1000);
+
+})();
+</script>
+</body>
+</html>

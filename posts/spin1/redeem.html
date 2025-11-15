@@ -1,0 +1,85 @@
+<!-- redeem.html -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Redeem — Spin & Win</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <a class="brand" href="game.html"><div class="logo">EY</div><h1>EarnYou</h1></a>
+      <div class="nav-actions">
+        <button class="btn" onclick="location.href='history.html'">History</button>
+        <button class="btn" onclick="location.href='game.html'">Back</button>
+      </div>
+    </header>
+
+    <main style="margin-top:20px">
+      <div class="card">
+        <h2>Redeem Points</h2>
+        <p class="small">Exchange your points for Google Play gift cards:</p>
+
+        <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+          <div style="flex:1"><strong>100 points</strong><br><span class="small">→ ₹10 Google Play</span></div>
+          <div style="flex:1"><strong>200 points</strong><br><span class="small">→ ₹20 Google Play</span></div>
+          <div style="flex:1"><strong>500 points</strong><br><span class="small">→ ₹50 Google Play</span></div>
+        </div>
+
+        <div style="margin-top:16px;display:flex;gap:8px;align-items:center">
+          <input id="redeem-amount" placeholder="Enter points to redeem (100/200/500)" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+          <button id="redeemBtn" class="btn primary">Redeem</button>
+        </div>
+
+        </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+<script>
+(function(){
+  const KEY_POINTS = 'sw_points';
+  const KEY_HISTORY = 'sw_history';
+  const toast = document.getElementById('toast');
+
+  function showToast(t,tm=2200){ toast.textContent = t; toast.classList.remove('hidden'); setTimeout(()=>toast.classList.add('hidden'),tm); }
+
+  function getPoints(){ return parseInt(localStorage.getItem(KEY_POINTS) || '0',10); }
+  function setPoints(v){ localStorage.setItem(KEY_POINTS, String(v)); }
+
+  function getHistory(){ return JSON.parse(localStorage.getItem(KEY_HISTORY) || '[]'); }
+  function saveHistory(h){ localStorage.setItem(KEY_HISTORY, JSON.stringify(h)); }
+
+  function generatePending(points, valueRupees){
+    const now = new Date();
+    const due = new Date(now.getTime() + 48*60*60*1000); // +48 hours
+    return {
+      id: 'redeem_' + Date.now(),
+      points: points,
+      value: valueRupees,
+      requestedAt: now.toISOString(),
+      dueAt: due.toISOString(),
+      status: 'pending',
+      code: null
+    };
+  }
+
+  document.getElementById('redeemBtn').addEventListener('click', ()=>{
+    const v = parseInt(document.getElementById('redeem-amount').value || '',10);
+    if(![100,200,500].includes(v)){ showToast('Enter valid redeem amount: 100, 200 or 500'); return; }
+    const points = getPoints();
+    if(points < v){ showToast('Not enough points'); return; }
+    // convert amount to rupees
+    const mapping = {100:10,200:20,500:50};
+    const rupees = mapping[v];
+    // deduct points and create pending
+    setPoints(points - v);
+    const hist = getHistory();
+    hist.push(generatePending(v, rupees));
+    saveHistory(hist);
+    showToast('Redeem request created and wait for 48 hours');
+    // redirect to history
+    setTimeout(()=>location.href='history.html',800);
+  });
+})();
+</script>
+</body>
+</html>
