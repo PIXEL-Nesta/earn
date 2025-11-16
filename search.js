@@ -9,6 +9,9 @@ const posts = [
   { title: "Top 10 Genuine Ways to Earn Money Online in 2025", url: "posts/post5.html" },
   { title: "Students के लिए Best Online Earning Methods 2025", url: "posts/post7.html" },
   { title: "AI का उपयोग करके कमाएँ: ₹1 लाख/महीना Passive Income Blueprint | EarnYou", url: "posts/post6.html" },
+  { title: "AI Earning Tools 2025 – Best Ways to Make Money Using Artificial Intelligence", url: "posts/post8.html" },
+  { title: "Best Pay-Per-Task Websites 2025 – Earn Money Completing Simple Tasks", url: "posts/post9.html" },
+  
   // add new posts here:
   // { title: "Your Post Title", url: "post4.html" },
 ];
