@@ -11,6 +11,8 @@ const posts = [
   { title: "AI का उपयोग करके कमाएँ: ₹1 लाख/महीना Passive Income Blueprint | EarnYou", url: "posts/post6.html" },
   { title: "AI Earning Tools 2025 – Best Ways to Make Money Using Artificial Intelligence", url: "posts/post8.html" },
   { title: "Best Pay-Per-Task Websites 2025 – Earn Money Completing Simple Tasks", url: "posts/post9.html" },
+  { title: "Top AI Jobs That Pay Daily", url: "posts/post12.html" },
+  { title: "Best Side Hustles for Students in 2025", url: "posts/post13.html" },
   
   // add new posts here:
   // { title: "Your Post Title", url: "post4.html" },
