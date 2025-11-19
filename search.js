@@ -13,6 +13,8 @@ const posts = [
   { title: "Best Pay-Per-Task Websites 2025 – Earn Money Completing Simple Tasks", url: "posts/post9.html" },
   { title: "Top AI Jobs That Pay Daily", url: "posts/post12.html" },
   { title: "Best Side Hustles for Students in 2025", url: "posts/post13.html" },
+  { title: "How to Earn Using AI Chatbots in 2025", url: "posts/post14.html" },
+  { title: "Top High-Paying Micro Task Websites in 2025", url: "posts/post15.html" },
   
   // add new posts here:
   // { title: "Your Post Title", url: "post4.html" },
