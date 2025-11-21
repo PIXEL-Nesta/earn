@@ -17,6 +17,7 @@ const posts = [
   { title: "Top AI Side Hustles in 2025 – Earn ₹500 to ₹3000 Daily", url: "posts/post16.html" },
   { title: "Best Zero-Investment Online Businesses to Start in 2025", url: "posts/post17.html" },
   { title: "Top AI Tools to Make Money in 2025 (Zero Skills Needed)", url: "posts/post18.html" },
+  { title: "How to Build Multiple Income Streams Online in 2025", url: "posts/post19.html" },
   
   
   // add new posts here:
