@@ -15,6 +15,8 @@ const posts = [
   { title: "Best Side Hustles for Students in 2025", url: "posts/post13.html" },
   { title: "How to Earn Using AI Chatbots in 2025", url: "posts/post14.html" },
   { title: "Top AI Side Hustles in 2025 – Earn ₹500 to ₹3000 Daily", url: "posts/post16.html" },
+  { title: "Best Zero-Investment Online Businesses to Start in 2025", url: "posts/post17.html" },
+  { title: "Top AI Tools to Make Money in 2025 (Zero Skills Needed)", url: "posts/post18.html" },
   
   
   // add new posts here:
