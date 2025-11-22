@@ -18,6 +18,9 @@ const posts = [
   { title: "Best Zero-Investment Online Businesses to Start in 2025", url: "posts/post17.html" },
   { title: "Top AI Tools to Make Money in 2025 (Zero Skills Needed)", url: "posts/post18.html" },
   { title: "How to Build Multiple Income Streams Online in 2025", url: "posts/post19.html" },
+  { title: "Top AI Side Hustles in 2025 (Zero Investment) – EarnYou", url: "posts/post20.html" },
+  { title: "Top 10 Evergreen Blog Niches for 2025 – EarnYou", url: "posts/post21.html" },
+  
   
   
   // add new posts here:
