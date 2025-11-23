@@ -20,6 +20,8 @@ const posts = [
   { title: "How to Build Multiple Income Streams Online in 2025", url: "posts/post19.html" },
   { title: "Top AI Side Hustles in 2025 (Zero Investment) – EarnYou", url: "posts/post20.html" },
   { title: "Top 10 Evergreen Blog Niches for 2025 – EarnYou", url: "posts/post21.html" },
+  { title: "AeroAI – The New Viral AI Tool of 2025 | Full Review, Features & Guide - EarnYou", url: "posts/post22.html" },
+  { title: "Top Emerging AI Tools & Apps in 2025 – EarnYou", url: "posts/post23.html" },
   
   
   
