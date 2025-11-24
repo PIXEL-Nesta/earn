@@ -22,6 +22,8 @@ const posts = [
   { title: "Top 10 Evergreen Blog Niches for 2025 – EarnYou", url: "posts/post21.html" },
   { title: "AeroAI – The New Viral AI Tool of 2025 | Full Review, Features & Guide - EarnYou", url: "posts/post22.html" },
   { title: "Top Emerging AI Tools & Apps in 2025 – EarnYou", url: "posts/post23.html" },
+   { title: "Future AI Jobs in 2025 No One Is Talking Abou – EarnYou", url: "posts/post24.html" },
+   { title: "Best AI Chrome Extensions of 2025 – EarnYou", url: "posts/post25.html" },
   
   
   
