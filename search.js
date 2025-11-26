@@ -26,7 +26,8 @@ const posts = [
    { title: "Best AI Chrome Extensions of 2025 – EarnYou", url: "posts/post25.html" },
   { title: "🔥 Top AI Smartphone Features of 2025 (New Hidden Features Explained) – EarnYou", url: "posts/post26.html" },
   { title: "Best New AI Mobile Apps of 2025 (Ultra-Fast, Smart & Free Tools Everyone Is Downloading) – EarnYou", url: "posts/post27.html" },
-  
+  { title: "Top 10 AI Chrome Extensions You Must Use in 2025 – EarnYou", url: "posts/post28.html" },
+  { title: "Best New AI Apps in 2025 – EarnYou", url: "posts/post29.html" },
   
   
   // add new posts here:
