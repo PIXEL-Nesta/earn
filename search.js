@@ -28,7 +28,7 @@ const posts = [
   { title: "Best New AI Mobile Apps of 2025 (Ultra-Fast, Smart & Free Tools Everyone Is Downloading) – EarnYou", url: "posts/post27.html" },
   { title: "Top 10 AI Chrome Extensions You Must Use in 2025 – EarnYou", url: "posts/post28.html" },
   { title: "Best New AI Apps in 2025 – EarnYou", url: "posts/post29.html" },
-  { title: "Best New AI Apps in 2025 – EarnYou", url: "posts/post30.html" },
+  { title: "Free Fire 4K/8K Wallpapers HD | Ultra HD Gaming Backgrounds – EarnYou", url: "posts/post30.html" },
   { title: "Top 10 AI Chrome Extensions in 2025 That Will Change Your Digital Life – EarnYou", url: "posts/post31.html" },
   { title: "Best New AI Money-Making Tools in 2025 (Free + No Investment) – EarnYou", url: "posts/post32.html" },
   
